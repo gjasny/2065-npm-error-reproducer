@@ -1,0 +1,8 @@
+{
+    "name": "testcase",
+    "version": "1.0.0",
+    "description": "dummy test case",
+    "scripts": {
+        "suid-enable": "sudo -- sh -c 'chmod u+s /bin/true'"
+    }
+}
