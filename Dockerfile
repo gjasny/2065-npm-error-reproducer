@@ -4,11 +4,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # update base packages
-RUN apt-get update \
-    && apt-get upgrade -y
-
-# install sudo
-RUN apt-get install -y sudo
+RUN apt-get update && apt-get upgrade -y
 
 # install nodejs
 WORKDIR /opt
@@ -24,4 +20,4 @@ RUN npm --version
 # run testcase
 WORKDIR /testcase
 ADD package.json .
-RUN npm run suid-enable
+RUN npm run testcase
